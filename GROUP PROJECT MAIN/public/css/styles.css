@@ -1,0 +1,475 @@
+/*Project: "Travel Experts" - group website
+//Filename:styles.css (MAIN CSS)
+//Target Dir: ./public/css
+//Authors: Wayne Frisch, Keith Wang, Chris Okpala
+//Date: 2020-03-19
+*/
+/*Reset and Globals*/
+/*Note also useing a normalizing min @ http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css in my html pages*/
+ 
+*{ 
+    box-sizing: border-box /* reset box-sizing*/
+}
+    
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    /*  background-color: rgb(236, 163, 28); */
+    
+}
+            
+    /*Used to test @media*/
+@media (max-width:800px){ 
+}
+    body{
+        background-color: rgb(236, 163, 28); /*displays behind the gallery tag to show @media is working*/
+}
+            
+@media (max-width:500px){
+    body{
+        background-color:rgb(236, 163, 28); 
+}
+.byline{
+    font-size: 15px;
+}
+.companyname{
+    font-size: 25px;
+}
+}
+    
+    
+h1{
+    font-size: 40px;
+    color: rgb(236, 163, 28);
+}
+
+h2{
+    font-size: 20px;
+    color: black;
+}
+    
+header{
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    /*background -image tags are below seperated out to allow to change hero image on each page*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    
+    border: 5px solid rgb(236, 163, 28);
+    
+}
+
+/*Hero Image background-images*/
+
+/*Main Page*/
+.bgImageMain{
+    background-image:linear-gradient(black, transparent 80%), url(../images/stonehendge.jpg);
+}
+
+/*Travel Packages Page*/
+.bgImagePackages{
+    background-image:linear-gradient(black, transparent 80%), url(../images/safari.jpg);
+}
+
+/*Booking Completed Page*/
+.bgImageBookingComplete{
+    background-image:linear-gradient(black, transparent 80%), url(../images/skydiving.jpg);
+}
+
+/*Contact Page*/
+.bgImageContact{
+    background-image:linear-gradient(black, transparent 80%), url(../images/camelride.jpg);
+}
+
+/*Register Page*/
+.bgImageRegister{
+    background-image:linear-gradient(black, transparent 80%), url(../images/ocean.jpg);
+}
+
+/*Registed Page*/
+.bgImageRegistration{
+    background-image:linear-gradient(black, transparent 80%), url(../images/northernlights.jpg);
+}
+
+/*About Page*/
+.bgImageAbout{
+    background-image:linear-gradient(black, transparent 80%), url(../images/paris.jpg);
+}
+    
+/*Used to make a grid for the header section*/
+.mainArea{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    
+    
+    grid-column: 1 / 13;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+    /* border: 5px solid red; for debugging*/
+}
+
+/*Used to create a flex container for the Logo and Title*/
+.topCell{
+    display: flex;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    
+    padding-left: 12px;
+    /*border: 5px solid black; for debugging*/
+}
+
+/*Used to position the Navigation Buttons*/
+.navBar{
+        
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: white;
+    
+    /* border: 5px solid black; for debugging*/
+    
+}
+
+/*Used to position a single Area below the Navigation Buttons*/
+.mainCell{
+    grid-column: 1 / 13;
+    grid-row: 3 / 5;
+
+    padding: 2em;
+    color: white;
+    
+    /* border: 5px solid purple;  for debugging */
+}
+
+/*Used to position a left-hand side column Area below the Navigation Buttons*/
+.leftCell{
+    grid-column: 1 / 7;
+    grid-row: 3 / 5;
+    
+    padding: 2em;
+    color: white;
+    
+    /* border: 5px solid yellow; for debugging */
+}
+
+/*Used to position a right-hand side column Area below the Navigation Buttons*/
+.rightCell{
+    grid-column: 7 / 13;
+    grid-row: 3 / 5;
+    
+    /* border: 5px solid purple;  for debugging */
+}
+
+
+    
+/*Used to create a flex grid to position the <galleryitems> cards Not used in Travel Experts Group */
+cardContainer{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /*default is flex-wrap: nowrap
+    /*justify-content: stretch;*/
+    flex-direction: row; /*default but helps me remember how to set column and row*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*border: 5px solid white;       /***** for debugging comment out with final release of project */
+    padding:1px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+cardBox{
+    margin: auto;
+    display: flexbox;
+    flex-wrap: wrap; /*default is flex-wrap: nowrap
+    /*justify-content: stretch;*/
+    flex-direction: row; /*default but helps me remember how to set column and row*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*border: 5px solid white;       /***** for debugging comment out with final release of project */
+    padding:1px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+/*gallery cards contained within <cardContainer> flex container*/
+galleryCards{
+        margin: auto;
+        height: 200px;
+        padding: 10px;
+        /*border: 1px solid green;       /***** for debugging - comment out with final release of project */
+    }
+    
+/*gallery cards contained within <cardContainer> flex container*/
+galleryitems{
+    margin: auto;
+    height: 400px;
+    padding: 10px;
+    /*border: 1px solid green;       /***** for debugging - comment out with final release of project */
+}
+
+/* CSS for the footer on the bottom of pages*/
+footer{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color:  black;
+}
+    
+/*limit the characters in the gallery cards (flex item) to display no more than 40 characters before wrapping */
+p {
+    overflow: hidden;
+    max-width: 40ch;
+    line-height: 1.5em; 
+}
+    
+
+    
+.flexHeader{
+    display: flex;
+    width: 100%;
+    
+    border: 5px solid orange;
+}
+    
+    
+nav{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    
+    /*background-color: coral;*/
+    border: 5px solid red;
+}
+
+.agentBox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    
+    /*background-color: coral;*/
+    border: 1px solid black;
+}
+    
+.buttonNav{
+    flex: auto;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 20px;
+}
+           
+.galleryArea{
+    display: grid;
+    border: 5px solid green;
+}
+    
+.formArea{
+    display: grid;
+    border: 5px solid blue;
+}
+    
+article >* {
+    margin: auto;
+}
+        
+article{
+    border:  1px solid grey;
+    background-color: chocolate;
+    display: flex
+}
+    
+ul {
+    display: flex;
+    justify-content: flex-end;
+    
+    /* background-color: white; */
+    color: white;
+    
+    list-style: none;
+    padding: 0;
+    /*  border: 5px solid rgb(236, 163, 28); for debugging*/
+}
+    
+li {
+    flex: auto;
+    
+    text-align: center;
+    border: 2px solid rgb(236, 163, 28) ;
+    color: white;
+}
+
+.leftText{ /*used to left justify text in agent list in contact.html*/
+    text-align: left;
+
+}
+
+
+a {
+    display: block;
+    padding: .5em;
+    text-decoration: none;
+    color: white;
+    
+}
+    
+a:hover {
+    background-color: rgb(158, 109, 19);
+}
+
+/* End of good CSS */
+/* Still Working Out the Form layout
+
+        /*Form css styles and make form a grid container which will float on various pages. TODO refine layout to get a "modern tight-looking" signup form*/
+        form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+        /*size the grid container and set margin and padding for form*/ 
+            width: 100%;
+            height: 400px;
+            margin: 0;
+            padding: 10px;
+        /*alignment and justification of elements in form **TODO not sure if this works */
+            align-items: center;
+            justify-content: center;
+        /*set border elements on form tag*/
+            border: 1px solid black; 
+            background-color: rgb(236, 163, 28); 
+        }
+
+        /* zeros the margins in the label tag */
+        label >* {
+            margin: 0;
+        }
+
+        /*flex items in grid*/
+        label{
+            display: flex;
+            flex-wrap: wrap;
+        /* for debug layout */
+            /*border:  1px solid white;
+        /* align-items: center;
+            justify-content: center; */
+        }
+        /*TODO does span need display:flex? */
+        span{
+            padding: 5px;
+            margin: 0;
+        }
+
+
+        /*used to place form input field items in form grid by x and y coordinates*/
+        /*nameing convention : bl=block in=input feild #=number of feild in consecutive order reading left to right */
+
+        .bl_in1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .bl_in2{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .bl_in3{
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+
+        .bl_in4{
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+
+        .bl_in5{
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        }
+
+        .bl_in6{
+            grid-column: 1 / 2;
+            grid-row: 6 / 7;
+        }
+
+        /* Used in Agent Agency display and Travel package listing */
+
+        packageContainer{
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap; /*default is flex-wrap: nowrap
+        /*justify-content: stretch;*/
+        flex-direction: row; /*default but helps me remember how to set column and row*/
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        /*border: 5px solid white;       /***** for debugging comment out with final release of project */
+        padding:1px;
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+    }
+
+
+package_box{
+    margin: auto;
+    /*border: 1px solid black;*/
+    height: 400px;
+    width: 280px
+
+}
+
+contacts_box{
+    display: grid;
+    margin: auto;
+    padding: 20px;
+    border: 4px
+}
+
+listing_box{
+    margin: auto;
+    border: 1px solid black;
+    height: 100px;
+    width: 500px
+
+}
+agency_box{
+    margin: 5px;
+    border: 1px solid black;
+    height: 200px;
+    width: 300px;
+    background-color: grey;
+
+}
+agent_box{
+    border: 1px solid black;
+    height: 150px;
+    width: 300px;
+    margin: 5px;
+    background-color: lightgray;
+
+}
+.pack{
+    display: block;
+    /*list-style: none;*/
+}

@@ -1,0 +1,48 @@
+//
+  Filename:book_packages.pug
+  Target Dir: ./views
+  Authors: Wayne Frisch, Keith Wang, Chris Okpala
+  Date: 2020-03-19
+  Credits:
+  Tony Grimes 2020, SAIT instructor - sait.ca
+  .git repository - https://github.com/acidtone/cprg210-frontend-winter-2020.git
+  Photo image "stonehendge.jpg" - AdobeStock, licensed 2020-02-20
+  Logo image "vr.png" - CleanPNG, Free license 2020-02-20
+  CSS Normalizer downloaded from - http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css
+  No HTML Validation Errors
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // Normalize / Reset Global CSS
+  link(rel='stylesheet' type='text/css' href='css/cssnormalize-min.css')
+  link(rel='stylesheet' type='text/css' href='css/styles.css')
+  title VR Travel Experts
+header.bgImageBookingComplete
+  // Used to change the background image in CSS
+  .mainArea
+    .topCell
+      img(src='images/vr.png' height='100' alt='Welcome to VR Travel Experts')
+      h1.companyname
+        i Welcome
+        |  to VR Travel Experts
+    .navBar
+      ul
+        li
+          a(href='index.html') MAIN
+        li
+          a(href='/index_packages') PACKAGES
+        li
+          a(href='/contact_agents') CONTACT
+        li
+          a(href='register.html') REGISTER
+        li
+          a(href='about.html') ABOUT
+
+    .mainCell
+      p.byline
+        | Thank You for Booking your VR Package. You will receive an email with details and a download link for you to enjoy your Virtual Reality vaction. Thank-you
+
+div
+  footer VR Travel Experts &copy; 2020

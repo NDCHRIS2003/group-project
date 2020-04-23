@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+Project: "Travel Experts" - group website
+Filename:index.html
+Target Dir: ./public
+Author: Wayne Frisch, Keith Wang, Chris Okpala
+Date: 2020-02-20
+
+Credits: 
+Tony Grimes 2020, SAIT instructor - sait.ca
+.git repository - https://github.com/acidtone/cprg210-frontend-winter-2020.git
+Photo image "stonehendge.jpg" and all item in gallery - AdobeStock, licensed 2020-02-20
+Logo image "vr.png" - CleanPNG, Free license 2020-02-20
+
+CSS Normalizer downloaded from - http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css
+1 Validation Error:
+Had one HTML validation error I could not fix on Line 60 where I call the the object <cardContainer> to display my gallery I assume it has to due with the fact that it is not a valid html element? I tried placing in <div class=cardContainer> and also surrounding it with a div but had no luck eliminating the error. The data.js runs with no error so not sure what to do here. Need to do some more work on this.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Normalize / Reset Global CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/cssnormalize-min.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <title>VR Travel Experts</title>
+
+
+
+</head>
+
+<body>
+
+<header class="bgImageMain"> <!--Used to change the background image in CSS-->
+    <div class="mainArea">
+
+        <div class="topCell">
+            <img src="./images/vr.png" height="100" alt="Welcome to VR Travel Experts">
+                <h1 class="companyname"><i>Welcome</i> to VR Travel Experts</h1>
+        </div>
+    
+        <div class="navBar">
+                <ul>
+                    <li><a href="index.html">MAIN</a></li>
+                    <li><a href="/index_packages">PACKAGES</a></li>
+                    <li><a href="/contact_agents">CONTACT</a></li>
+                    <li><a href="register.html">REGISTER</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+        </div>
+
+    
+        <div class="mainCell"> 
+            <p class="byline">Visit the Druid remains of Stonehendge without leaving home. VR Travel packages start as low as $25 USD for tours of famous destinations in over 24 countries.</p>
+        </div>
+
+    </div>
+
+</header>
+
+
+    <!--Gallery Images (flex-items) are displayed betweem <div> in <galleryitem> innerHTML data comes from /js/data.js -->
+<!--<cardContainer></cardContainer> Flex container that contains the output from data.js-->
+    
+
+    <div>
+        <footer>VR Travel Experts &copy; 2020</footer>
+    </div>
+
+    <script src="./js/data.js"></script> <!--Contains array with data for the <cardContainer> tag-->
+</body>
+
+    
+
+</html>
